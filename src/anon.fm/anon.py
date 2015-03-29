@@ -86,11 +86,11 @@ class MessageSendButton(Button):
         count_chars = len(text)
 
         if count_chars <= 1:
-            tkMessageBox.showerror("SASAI", "You must to put any text")
+            tkMessageBox.showerror("Error", "You must put any text")
             return
         if count_chars > 250:
             tkMessageBox.showerror(
-                "SASAI", "You must to put less than 250 characters"
+                "Error", "You must put less than 250 characters"
             )
             return
         print text, ' has sent'
@@ -137,7 +137,7 @@ class MessagesList(Listbox):
                 i += 1
         except ValueError as e:
             tkMessageBox.showerror(
-                "SASAI", str(e)
+                "Error", str(e)
             )
 
     def new_message(self, event=None):
